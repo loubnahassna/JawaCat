@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include jawacat *.css
+recursive-include jawacat *.csv
+recursive-include jawacat *.html
+recursive-include jawacat *.ico
+recursive-include jawacat *.js
+recursive-include jawacat *.json
+recursive-include jawacat *.md
+recursive-include jawacat *.png
+recursive-include jawacat *.py
+recursive-include jawacat *.svg
+recursive-include jawacat *.txt
+recursive-exclude jawacat *.pyc
