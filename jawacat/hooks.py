@@ -14,6 +14,10 @@ app_license = "MIT"
 # Includes in <head>
 # ------------------
 
+website_context = {
+	"favicon": 	"/assets/jawacat/images/logo.jpeg",
+	"splash_image": "/assets/jawacat/images/logo.jpeg"
+}
 # include js, css files in header of desk.html
 # app_include_css = "/assets/jawacat/css/jawacat.css"
 # app_include_js = "/assets/jawacat/js/jawacat.js"
@@ -86,6 +90,21 @@ app_license = "MIT"
 # 		"on_trash": "method"
 #	}
 # }
+
+doctype_js = {
+	"Purchase Invoice" : "public/js/purchase_invoice.js"
+}
+
+doc_events = {
+    "Sales Invoice": {
+        "on_submit": "jawacat.controllers.base_controller.validate_controller"
+    },
+    "Purchase Invoice":{
+        "on_submit": "jawacat.controllers.base_controller.validate_controller"
+    },
+
+    
+}
 
 # Scheduled Tasks
 # ---------------
