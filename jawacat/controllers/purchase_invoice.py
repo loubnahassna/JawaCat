@@ -1,6 +1,6 @@
 import frappe
 from frappe import _
-from jawa_logistics.controllers.base_controller import BaseController
+from jawacat.controllers.base_controller import BaseController
 from frappe.utils import cint, cstr, date_diff, flt, formatdate, getdate, get_link_to_form, comma_or, get_fullname, add_days, nowdate, get_datetime_str
 from datetime import datetime
 from dateutil import relativedelta

@@ -15,11 +15,11 @@ def validate_controller(doc, method):
     try:
         if doctype in SALE:
             if(method == "on_submit"):
-                from jawa_logistics.controllers.sales_invoice import SellingController
+                from jawacat.controllers.sales_invoice import SellingController
                 SellingController(doc, doctype, method).validate_sales()
         elif(doctype in PURCHASE):
             if(method == "on_submit"):
-                from jawa_logistics.controllers.purchase_invoice import PurchaseController
+                from jawacat.controllers.purchase_invoice import PurchaseController
                 PurchaseController(doc, doctype, method).validate_purchase()
 
     except Exception as e:

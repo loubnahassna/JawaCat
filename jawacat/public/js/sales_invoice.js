@@ -1,3 +1,4 @@
+
 frappe.ui.form.on('Sales Invoice Item', {
 
 	service_start_date: function (frm, cdt, cdn) {
@@ -10,6 +11,7 @@ frappe.ui.form.on('Sales Invoice Item', {
 })
 
 
+
 var set_end_month = function(frm, cdt, cdn) {
 	var d = frappe.model.get_doc(cdt, cdn);
 	if (d.no_of_months && d.service_start_date) {
@@ -18,3 +20,4 @@ var set_end_month = function(frm, cdt, cdn) {
 		frappe.model.set_value(cdt, cdn, "service_end_date", end_date);
 	}
 }
+
