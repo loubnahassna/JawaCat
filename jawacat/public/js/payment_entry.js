@@ -91,10 +91,10 @@ frappe.ui.form.on('Payment Entry', {
 							frm.set_value("received_amount",
 								total_negative_outstanding - total_positive_outstanding);
 					}
-					setTimeout(function(){
-						references = cur_frm.doc.references;
-						console.log(references);
-					},1000);
+					// setTimeout(function(){
+					// 	references = cur_frm.doc.references;
+					// 	console.log(references);
+					// },1000);
 				}
 
 				frm.events.allocate_party_amount_against_ref_docs(frm,
