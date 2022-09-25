@@ -92,7 +92,8 @@ home_page = "login"
 # }
 
 doctype_js = {
-	"Purchase Invoice" : "public/js/purchase_invoice.js"
+	"Purchase Invoice" : "public/js/purchase_invoice.js",
+	"Payment Entry" : "public/js/payment_entry.js"
 }
 
 doc_events = {
@@ -135,9 +136,9 @@ doc_events = {
 # Overriding Methods
 # ------------------------------
 #
-# override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "jawacat.event.get_events"
-# }
+override_whitelisted_methods = {
+	"erpnext.accounts.doctype.payment_entry.payment_entry.get_outstanding_reference_documents" : "jawacat.hook.whitelisted.get_outstanding_reference_documents"
+}
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
