@@ -43,7 +43,7 @@ frappe.ui.form.on('Payment Entry', {
 					var total_negative_outstanding = 0;
 					var add_rows = true;
 					$.each(r.message, function(i, d) {
-						add_rows = (["Sales Invoice","Purchase Invoice"].includes(d.voucher_type) && d.total_amount < 0)? false: true ;
+						add_rows = (["Sales Invoice","Purchase Invoice"].includes(d.voucher_type) && (d.total_amount < 0 || d.outstanding_amount < 0))? false: true ;
 						if(add_rows){
 							var c = frm.add_child("references");
 							c.reference_doctype = d.voucher_type;
